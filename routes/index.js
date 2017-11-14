@@ -1,7 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var data = {
-  user: 'joe',
+  user: 'John',
+  age : 26,
+  average :30,
   latestProduct: {
       url: 'products/greenmouse.html',
       name: 'mouse'

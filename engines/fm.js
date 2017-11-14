@@ -12,8 +12,8 @@ var fm = new Freemarker({
 exports.viewRoot = viewRoot;
 exports.engine = function(filePath, options, callback) {
     var sourceAbsolutePath = path.normalize(filePath);
-    fm.render(sourceAbsolutePath.substring(path.normalize(viewRoot).length)
-    ,options,function(err, html, output){
+    fm.render(sourceAbsolutePath.substring(path.normalize(viewRoot).length),options,
+        function(err, html, output){
         if (err) {
             return callback(new Error(err));
         }
