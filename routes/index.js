@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var data = {
-  user: 'John',
+  name: '卖鱼灿',
   age : 26,
   average :30,
   latestProduct: {
@@ -11,7 +11,8 @@ var data = {
 };
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', data);
+	console.log("data："+data.name);
+	res.render('index', data);
 });
 
 module.exports = router;

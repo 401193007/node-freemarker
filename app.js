@@ -8,7 +8,10 @@ var bodyParser = require('body-parser');
 var freemarker = require('./engines/fm.js');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var list = require('./routes/list');
+var fn = require('./routes/fn');
+var number = require('./routes/number');
+
 // var frees = require('./routes/frees');
 
 var app = express();
@@ -29,7 +32,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/list', list);
+app.use('/fn',fn);
+app.use('/number',number);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

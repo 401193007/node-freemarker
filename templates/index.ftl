@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Welcome!</title>
-</head>
-<body>
+<#include "/common/header.ftl">	
 	<#-- 模板 + 数据模型 = 输出 -->
-	<h1>Welcome ${user}!</h1>
+	<h1>Welcome ${name}!</h1>
 	<p>
 		${age} 
 		<#if age lt average >
@@ -16,5 +10,4 @@
 		</#if>
 	</p>
 	<a href="${latestProduct.url}">${latestProduct.name}</a>
-</body>
-</html>
+<#include "/common/footer.ftl">

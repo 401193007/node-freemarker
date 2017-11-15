@@ -5,8 +5,8 @@ var fm = new Freemarker({
     viewRoot: viewRoot,
     options: {
         // 'sourceRoot':  __dirname + '/templates',
-        sourceEncoding:"utf-8",
-        outputEncoding:"utf-8"
+        // sourceEncoding:"utf-8",
+        // outputEncoding:"utf-8"
     }
 });
 exports.viewRoot = viewRoot;
